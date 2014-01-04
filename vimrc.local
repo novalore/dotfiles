@@ -1,0 +1,12 @@
+colorscheme devbox-dark-256
+"disable folding
+set foldenable!
+"I don't like help on F1, but I love Fkeys
+nnoremap <F1> :UndotreeToggle<CR>
+nnoremap <F2> :NERDTreeToggle<CR>
+"Writing comments in various languages confuses vim's spellchecker
+set nospell
+"indent-guides and devbox-dark-256 are not friends :-/"
+UnBundle 'nathanaelkane/vim-indent-guides'
+UnBundle 'myusuf3/numbers.vim'
+let g:airline_powerline_fonts=1
