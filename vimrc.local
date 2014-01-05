@@ -10,3 +10,4 @@ set nospell
 UnBundle 'nathanaelkane/vim-indent-guides'
 UnBundle 'myusuf3/numbers.vim'
 let g:airline_powerline_fonts=1
+set wrap
