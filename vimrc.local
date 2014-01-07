@@ -1,4 +1,6 @@
 colorscheme devbox-dark-256
+"Wrap long lines, but keep words whole
+set wrap lbr
 "disable folding
 set foldenable!
 "I don't like help on F1, but I love Fkeys
@@ -8,7 +10,7 @@ nnoremap <F2> :NERDTreeToggle<CR>
 set nospell
 "indent-guides and devbox-dark-256 are not friends :-/"
 UnBundle 'nathanaelkane/vim-indent-guides'
-UnBundle 'myusuf3/numbers.vim'
 UnBundle 'justinmk/vim-sneak'
 let g:airline_powerline_fonts=1
-set wrap
+set clipboard=unnamed
+set tags=./tags;~/
