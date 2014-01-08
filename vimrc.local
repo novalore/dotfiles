@@ -1,8 +1,11 @@
 colorscheme devbox-dark-256
+syntax on
 "Wrap long lines, but keep words whole
 set wrap lbr
 "disable folding
 set foldenable!
+"but not in php...
+let php_folding = 1
 "I don't like help on F1, but I love Fkeys
 nnoremap <F1> :UndotreeToggle<CR>
 nnoremap <F2> :NERDTreeToggle<CR>
@@ -14,3 +17,6 @@ UnBundle 'justinmk/vim-sneak'
 let g:airline_powerline_fonts=1
 set clipboard=unnamed
 set tags=./tags;~/
+"##############
+"Custom aliases
+"##############
