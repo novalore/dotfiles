@@ -30,3 +30,15 @@ function mkcd (){
     alias install='sudo apt-get install'
     alias remove='sudo apt-get remove'
     alias update='sudo apt-get update'
+
+    alias ctags-php='ctags-exuberant -f tags \
+    -h ".php" -R \
+    --PHP-kinds=cfiv \
+    --totals=yes \
+    --tag-relative=yes \
+    --PHP-kinds=cfiv \
+    --regex-PHP="/(abstract)?\s+class\s+([^ ]+)/\2/c/" \
+    --regex-PHP="/interface\s+([^ ]+)/\1/i/" \
+    --exclude="*.js" \
+    --exclude=".svn" \
+    --exclude=".git"'
