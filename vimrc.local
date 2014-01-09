@@ -15,8 +15,10 @@ set nospell
 UnBundle 'nathanaelkane/vim-indent-guides'
 UnBundle 'justinmk/vim-sneak'
 let g:airline_powerline_fonts=1
-set clipboard=unnamed
 set tags=./tags;~/
+set clipboard=unnamedplus
 "##############
 "Custom aliases
 "##############
+"pastetoggle is on <F12> in spf13, but I use yakuake
+set pastetoggle=<leader>p
