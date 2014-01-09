@@ -1,1 +1,2 @@
-Bundle 'gorodinskiy/vim-coloresque'
+"Bundle 'gorodinskiy/vim-coloresque' -> merged into spf13-vim
+Bundle 'jelera/vim-gummybears-colorscheme'
