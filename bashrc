@@ -104,7 +104,8 @@ export VISUAL=vim
 ##https://github.com/magicmonty/bash-git-prompt
 case "$TERM" in
     xterm*|rxvt*)
-        export GIT_PROMPT_START="${debian_chroot:+($debian_chroot)}\u@\h: \w\a"
+        #export GIT_PROMPT_START="\u@\h: \w\a"
+        export GIT_PROMPT_START="\[\033[1;30m\][\u@\h:\w]\[\033[0m\]"
         ;;
     *)
         ;;
