@@ -100,12 +100,34 @@ fi
 #I love vim!
 export EDITOR=vim
 export VISUAL=vim
+# I love Debian style prompt, but sometimes pwd is too long...
+# https://www.debian-administration.org/articles/548
+function truncate_pwd
+{
+ if [ $HOME == $PWD ]
+ then
+   newPWD="~"
+ elif [ $HOME ==  ${PWD:0:${#HOME}} ]
+ then
+   newPWD="~${PWD:${#HOME}}"
+ else
+   newPWD=$PWD
+ fi
 
+  local pwdmaxlen=16
+  if [ ${#newPWD} -gt $pwdmaxlen ]
+  then
+    local pwdoffset=$(( ${#newPWD} - $pwdmaxlen  ))
+    newPWD="...${newPWD:$pwdoffset:$pwdmaxlen}"
+  fi
+}
+
+PROMPT_COMMAND=truncate_pwd
 # I want info on git status in the prompt:
 # https://github.com/magicmonty/bash-git-prompt
 case "$TERM" in
     xterm*|rxvt*)
-        export GIT_PROMPT_START="\[\033[1;30m\][\u@\h:\W]\[\033[0m\]"
+        export GIT_PROMPT_START="\[\033[1;30m\][\u@\h: \${newPWD}]\[\033[0m\]"
         ;;
     *)
         ;;
