@@ -97,11 +97,12 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-
+#I love vim!
 export EDITOR=vim
 export VISUAL=vim
-##I want info on git status in the prompt:
-##https://github.com/magicmonty/bash-git-prompt
+
+# I want info on git status in the prompt:
+# https://github.com/magicmonty/bash-git-prompt
 case "$TERM" in
     xterm*|rxvt*)
         export GIT_PROMPT_START="\[\033[1;30m\][\u@\h:\W]\[\033[0m\]"
