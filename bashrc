@@ -114,11 +114,11 @@ function truncate_pwd
    newPWD=$PWD
  fi
 
-  local pwdmaxlen=16
-  if [ ${#newPWD} -gt $pwdmaxlen ]
+  local pwdchars=16
+  if [ ${#newPWD} -gt $pwdchars ]
   then
-    local pwdoffset=$(( ${#newPWD} - $pwdmaxlen  ))
-    newPWD="...${newPWD:$pwdoffset:$pwdmaxlen}"
+    local pwdoffset=$(( ${#newPWD} - $pwdchars  ))
+    newPWD="...${newPWD:$pwdoffset:$pwdchars}"
   fi
 }
 
