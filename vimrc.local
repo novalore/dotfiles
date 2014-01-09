@@ -14,7 +14,6 @@ set nospell
 "indent-guides and devbox-dark-256 are not friends :-/"
 UnBundle 'nathanaelkane/vim-indent-guides'
 UnBundle 'justinmk/vim-sneak'
-let g:airline_powerline_fonts=1
 set tags=./tags;~/
 set clipboard=unnamedplus
 "###########################
