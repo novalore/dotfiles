@@ -17,8 +17,8 @@ UnBundle 'justinmk/vim-sneak'
 let g:airline_powerline_fonts=1
 set tags=./tags;~/
 set clipboard=unnamedplus
-"##############
-"Custom aliases
-"##############
+"###########################
+"Custom aliases and mappings
+"###########################
 "pastetoggle is on <F12> in spf13, but I use yakuake
-set pastetoggle=<leader>p
+""nmap <leader>p :set pastetoggle<CR>
