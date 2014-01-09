@@ -1,5 +1,10 @@
-colorscheme devbox-dark-256
+"Colors
+colorscheme vividchalk
+"CursorLine doesn't want to be set, so I have to force it...
+autocmd VimEnter * highlight CursorLine cterm=NONE  ctermfg=NONE ctermbg=232
 syntax on
+"I'll tell you when I want numbers!
+set nu!
 "Wrap long lines, but keep words whole
 set wrap lbr
 "disable folding
