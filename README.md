@@ -2,3 +2,4 @@
 
 ho raccolto un po' di configurazioni (sia mie che scopiazzate in giro)
 *Se vuoi clonare questa repo tieni conto che io uso [spf13-vim](http://vim.spf13.com), quindi i `vimrc` che trovi qua funzionano bene solo se fungono da complemento a spf13, altrimenti puoi usarli come suggerimento per delle conf tutte tue.*
+*Ho anche scoperto l'ottimo [bash-git-prompt](https://github.com/magicmonty/bash-git-prompt), quindi se lo installi nella tua home il mio bashrc se ne accorge e lo usa*
