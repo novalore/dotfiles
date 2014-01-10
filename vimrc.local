@@ -21,6 +21,8 @@ UnBundle 'nathanaelkane/vim-indent-guides'
 UnBundle 'justinmk/vim-sneak'
 set tags=./tags;~/
 set clipboard=unnamedplus
+"Open NERDtree files in a new tab
+let NERDTreeMapOpenInTab='<ENTER>'"
 "###########################
 "Custom aliases and mappings
 "###########################
@@ -33,3 +35,4 @@ nmap <leader>p :setlocal paste! paste?<cr>
 "I don't like help on F1, but I love Fkeys
 nnoremap <F1> :UndotreeToggle<CR>
 nnoremap <F2> :NERDTreeToggle<CR>
+nnoremap <F3> :TagbarToggle<CR>

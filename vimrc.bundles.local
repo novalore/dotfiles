@@ -1,1 +1,4 @@
 "Bundle 'gorodinskiy/vim-coloresque' -> merged into spf13-vim
+Bundle "othree/html5-syntax.vim"
+Bundle "gregsexton/MatchTag"
+Bundle "docunext/closetag.vim"
