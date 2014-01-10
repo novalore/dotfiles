@@ -5,7 +5,7 @@ colorscheme vividchalk
 "CursorLine doesn't want to be set, so I have to force it...
 autocmd VimEnter * highlight CursorLine cterm=NONE  ctermfg=NONE ctermbg=232
 "Fancy airline theme
-let g:airline_theme = 'airlineish'
+let g:airline_theme = 'bubblegum'
 "I'll tell you when I want numbers!
 set nu!
 "Wrap long lines, but keep words whole
