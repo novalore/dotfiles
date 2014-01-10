@@ -11,9 +11,6 @@ set wrap lbr
 set foldenable!
 "but not in php...
 let php_folding = 1
-"I don't like help on F1, but I love Fkeys
-nnoremap <F1> :UndotreeToggle<CR>
-nnoremap <F2> :NERDTreeToggle<CR>
 "Writing comments in various languages confuses vim's spellchecker
 set nospell
 "indent-guides and devbox-dark-256 are not friends :-/"
@@ -25,4 +22,11 @@ set clipboard=unnamedplus
 "Custom aliases and mappings
 "###########################
 "pastetoggle is on <F12> in spf13, but I use yakuake
-""nmap <leader>p :set pastetoggle<CR>
+"nmap <leader>p :set pastetoggle<CR>
+"this mapping works as expected (and echoes current state as a bonus!)
+nmap <leader>p :setlocal paste! paste?<cr>
+" " Select the last edited/pasted text
+" nmap gv `[v``]`"
+"I don't like help on F1, but I love Fkeys
+nnoremap <F1> :UndotreeToggle<CR>
+nnoremap <F2> :NERDTreeToggle<CR>
