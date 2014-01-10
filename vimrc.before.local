@@ -23,3 +23,5 @@ let g:spf13_no_autochdir = 1
 
 " Enable powerline symbols
 let g:airline_powerline_fonts = 1
+"enable/disable displaying buffers with a single tab.
+let g:airline#extensions#tabline#show_buffers = 0
