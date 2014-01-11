@@ -1,11 +1,10 @@
 "First of all I want to be sure that syntax highlighting is on all the time...
-autocmd BufRead,BufNewFile * :syntax on
+"autocmd BufRead,BufNewFile * :syntax on
+syntax on
 "Colors
 colorscheme vividchalk
 "CursorLine doesn't want to be set, so I have to force it...
 autocmd VimEnter * highlight CursorLine cterm=NONE  ctermfg=NONE ctermbg=232
-"Fancy airline theme
-let g:airline_theme = 'bubblegum'
 "I'll tell you when I want numbers!
 set nu!
 "Wrap long lines, but keep words whole
@@ -22,14 +21,14 @@ UnBundle 'justinmk/vim-sneak'
 set tags=./tags;~/
 set clipboard=unnamedplus
 "Open NERDtree files in a new tab
-let NERDTreeMapOpenInTab='<ENTER>'"
+let g:NERDTreeMapOpenInTab='<ENTER>'
 "tpl files are usually full of html tags
 autocmd BufRead,BufNewFile *.tpl set filetype=html
 "Wrap at 80 chars for Markdown
 autocmd BufRead,BufNewFile *.md setlocal textwidth=80
-"Opening new split panes on the left and on top seems rather counterintuintive
-set splitbelow
-set splitright
+"Default behaviour seems rather counterintuintive to me
+set splitbelow " Vertical splits open to the right of the current file
+set splitright " Horizontal splits open below current file
 "###########################
 "Custom aliases and mappings
 "###########################
@@ -40,3 +39,6 @@ nmap <leader>p :setlocal paste! paste?<cr>
 nnoremap <F1> :UndotreeToggle<CR>
 nnoremap <F2> :NERDTreeToggle<CR>
 nnoremap <F3> :TagbarToggle<CR>
+" cycle through tabs
+nnoremap ,<Tab> :tabnext<CR>
+nnoremap ,<S-Tab> :tabprevious<CR>

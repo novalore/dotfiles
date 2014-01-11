@@ -5,7 +5,9 @@
     alias h='history|grep'
     alias cd..="cd .."
     alias ms='mysql -uroot -p'
-
+    alias rm='rm -i'
+    alias grep='grep --color'
+    
     # Make a new dir and move in it
     function mkcd (){
         mkdir $1 && cd $1
@@ -46,3 +48,15 @@
     --exclude="*.js" \
     --exclude=".svn" \
     --exclude=".git"'
+
+    # Function to repeat a command N times, eg repeat 10 <command>
+    # https://github.com/djhaus/dotfiles
+    repeat()
+    {
+        n=$1
+        shift
+        while [ $(( n -= 1 )) -ge 0 ]
+        do
+            "$@"
+        done
+    }
