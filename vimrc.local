@@ -36,8 +36,6 @@ set splitright
 "pastetoggle is on <F12> in spf13, but I use yakuake
 "this mapping works as expected (and echoes current state as a bonus!)
 nmap <leader>p :setlocal paste! paste?<cr>
-" " Select the last edited/pasted text
-" nmap gv `[v``]`"
 "I don't like help on F1, but I love Fkeys
 nnoremap <F1> :UndotreeToggle<CR>
 nnoremap <F2> :NERDTreeToggle<CR>
