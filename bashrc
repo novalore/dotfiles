@@ -100,6 +100,7 @@ fi
 #I love vim!
 export EDITOR=vim
 export VISUAL=vim
+export PAGER=less
 # I love Debian style prompt, but sometimes pwd is too long...
 # https://www.debian-administration.org/articles/548
 function truncate_pwd

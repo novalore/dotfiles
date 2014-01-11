@@ -23,11 +23,17 @@ set tags=./tags;~/
 set clipboard=unnamedplus
 "Open NERDtree files in a new tab
 let NERDTreeMapOpenInTab='<ENTER>'"
+"tpl files are usually full of html tags
+autocmd BufRead,BufNewFile *.tpl set filetype=html
+"Wrap at 80 chars for Markdown
+autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+"Opening new split panes on the left and on top seems rather counterintuintive
+set splitbelow
+set splitright
 "###########################
 "Custom aliases and mappings
 "###########################
 "pastetoggle is on <F12> in spf13, but I use yakuake
-"nmap <leader>p :set pastetoggle<CR>
 "this mapping works as expected (and echoes current state as a bonus!)
 nmap <leader>p :setlocal paste! paste?<cr>
 " " Select the last edited/pasted text

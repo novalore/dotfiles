@@ -2,7 +2,7 @@
 #version 0.4
 
     # Useful aliases
-    alias h='history'
+    alias h='history|grep'
     alias cd..="cd .."
     alias ms='mysql -uroot -p'
 
@@ -14,7 +14,8 @@
     #git aliases
     alias gitlog="git log --color --graph --pretty=format:'%Cgreen[%Creset%h%Cgreen]%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
     alias gittoday="git log --color --graph --pretty=format:'%Cgreen[%Creset%h%Cgreen]%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --since=yesterday"
-    alias commit="git commit"
+    alias commit='git commit'
+    alias gb='git branch -v'
     alias gc='git commit -m'
     alias gt='git commit -m "typo"'
     alias ga='git add '
@@ -22,9 +23,10 @@
     alias gr='git rm'
     alias gs='git status'
     alias gss='git status -s'
-    alias gull='git pull origin'
+    alias gpl='git pull origin'
     alias gush='git push origin'
     alias gco='git checkout'
+    alias amend='git commit --amend'
     alias checkout='git checkout'
 
     #apt aliases
