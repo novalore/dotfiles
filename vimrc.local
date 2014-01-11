@@ -1,6 +1,5 @@
 "First of all I want to be sure that syntax highlighting is on all the time...
-"autocmd BufRead,BufNewFile * :syntax on
-syntax on
+syntax enable
 "Colors
 colorscheme vividchalk
 "CursorLine doesn't want to be set, so I have to force it...
