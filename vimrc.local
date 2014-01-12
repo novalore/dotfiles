@@ -41,3 +41,5 @@ nnoremap <F3> :TagbarToggle<CR>
 " cycle through tabs
 nnoremap ,<Tab> :tabnext<CR>
 nnoremap ,<S-Tab> :tabprevious<CR>
+"; and : live next to each other...
+nnoremap ; :
