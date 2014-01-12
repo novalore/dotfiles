@@ -1,5 +1,9 @@
 #!/bin/bash
-# install.sh
+#
+##############
+# INSTALL.SH #
+##############
+#
 # Install script to symlink config files in ~/dotfiles to "canonical" homedir-based locations
 
 # Vars:
