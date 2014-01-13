@@ -1,4 +1,6 @@
-"Bundle 'gorodinskiy/vim-coloresque' -> merged into spf13-vim
+"I edit HTML sometimes ;-)
 Bundle "othree/html5-syntax.vim"
 Bundle "gregsexton/MatchTag"
 Bundle "docunext/closetag.vim"
+"Markdown magic! ...should try one day...
+"Bundle "suan/vim-instant-markdown"
