@@ -1,5 +1,9 @@
 "First of all I want to be sure that syntax highlighting is on all the time...
 syntax enable
+"Vars
+let g:author = "Lorenzo Novaro"
+let g:email  = "novalore@19.coop"
+let $DOTFILES = expand('~/dotfiles')
 "Colors
 colorscheme vividchalk
 "CursorLine doesn't want to be set, so I have to force it...
@@ -28,6 +32,40 @@ autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 "Default behaviour seems rather counterintuintive to me
 set splitbelow " Vertical splits open to the right of the current file
 set splitright " Horizontal splits open below current file
+" Vim-template plugin
+" https://github.com/naoina/dot-files/
+let g:template_basedir = $DOTFILES . '/templates'
+let g:template_files = '**'
+let g:template_free_pattern = 'skel-\?'
+let g:comment_oneline_only_ft = {
+    \ 'python': 1,
+    \ 'ruby': 1,
+    \ 'sh': 1,
+    \ }
+autocmd User plugin-template-loaded call s:template_keywords()
+function! s:template_keywords()
+  let firstline = search("@LICENSE@", "cnW")
+  if firstline != 0
+    let license = readfile(g:template_basedir . '/LICENSE')
+    let lastline = firstline + len(license)
+    let type = has_key(g:comment_oneline_only_ft, &ft) ? 'AlignLeft' : 'Sexy'
+
+    %s/@LICENSE@/\=license/ge
+    execute firstline . "," . lastline . 'call NERDComment("n", "' . type . '")'
+    unlet license
+  endif
+
+  %s/@AUTHOR@/\=g:author/ge
+  %s/@EMAIL@/\=g:email/ge
+  %s/@YEAR@/\=strftime('%Y')/ge
+  %s/@FILE@/\=expand('%:t:r')/ge
+  %s/@DIRNAME@/\=expand('%:p:h:t')/ge
+
+  call cursor(1, 0)
+  if search('<CURSOR>', 'c')
+    normal! "_da<zz
+  endif
+endfunction
 "###########################
 "Custom aliases and mappings
 "###########################

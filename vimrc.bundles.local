@@ -2,5 +2,6 @@
 Bundle "othree/html5-syntax.vim"
 Bundle "gregsexton/MatchTag"
 Bundle "docunext/closetag.vim"
+Bundle "thinca/vim-template"
 "Markdown magic! ...should try one day...
 "Bundle "suan/vim-instant-markdown"
