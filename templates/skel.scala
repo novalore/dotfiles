@@ -1,5 +1,0 @@
-@LICENSE@
-
-
-class @FILE@ {<CURSOR>
-}
