@@ -16,6 +16,7 @@
     alias ext='exit'
     alias :q='exit'
     alias :x='exit'
+    alias su-='su -'
 
     # Make a new dir and move in it
     function mkcd (){
