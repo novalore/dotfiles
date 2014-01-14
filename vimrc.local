@@ -11,7 +11,11 @@ autocmd VimEnter * highlight CursorLine cterm=NONE  ctermfg=NONE ctermbg=232
 "I'll tell you when I want numbers!
 set nu!
 "Wrap long lines, but keep words whole
-set wrap lbr
+"set wrap lbr
+set linebreak
+"No newlines on wrapped input
+set textwidth=0
+set wrapmargin=0
 "disable folding
 set foldenable!
 "but not in php...
@@ -20,6 +24,7 @@ let php_folding = 1
 set nospell
 "indent-guides and pastel colorthemes are not friends :-/"
 UnBundle 'nathanaelkane/vim-indent-guides'
+"I want my S key back!
 UnBundle 'justinmk/vim-sneak'
 set tags=./tags;~/
 set clipboard=unnamedplus

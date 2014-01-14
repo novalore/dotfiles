@@ -1,13 +1,22 @@
 #!/bin/bash
-#version 0.4
+#version 0.5
 
     # Useful aliases
     alias h='history|grep'
-    alias cd..="cd .."
+    alias cd-='cd -' 
+    alias cd.='cd ..'
+    alias cd..='cd ..'
     alias ms='mysql -uroot -p'
-    alias rm='rm -i'
     alias grep='grep --color'
-    
+
+    #Sometimes I'm tired...
+    alias eit='exit'
+    alias eixt='exit'
+    alias exi='exit'
+    alias ext='exit'
+    alias :q='exit'
+    alias :x='exit'
+
     # Make a new dir and move in it
     function mkcd (){
         mkdir $1 && cd $1
