@@ -26,7 +26,6 @@ set nospell
 UnBundle 'nathanaelkane/vim-indent-guides'
 "I want my S key back!
 UnBundle 'justinmk/vim-sneak'
-set tags=./tags;~/
 set clipboard=unnamedplus
 "Open NERDtree files in a new tab
 let g:NERDTreeMapOpenInTab='<ENTER>'
@@ -37,8 +36,11 @@ autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 "Default behaviour seems rather counterintuintive to me
 set splitbelow " Vertical splits open to the right of the current file
 set splitright " Horizontal splits open below current file
+"let g:ProjTags = [ "/home/www/besweb" ]
+"**************************************
 " Vim-template plugin
 " https://github.com/naoina/dot-files/
+"**************************************
 let g:template_basedir = $DOTFILES . '/templates'
 let g:template_files = '**'
 let g:template_free_pattern = 'skel-\?'
