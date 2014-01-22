@@ -31,8 +31,10 @@ set clipboard=unnamedplus
 let g:NERDTreeMapOpenInTab='<ENTER>'
 "tpl files are usually full of html tags
 autocmd BufRead,BufNewFile *.tpl set filetype=html
-"Wrap at 80 chars for Markdown
+"Wrap at 80 chars for Markdown, Text, Commits
 autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+autocmd BufRead,BufNewFile *.txt setlocal textwidth=80
+autocmd FileType gitcommit setlocal textwidth=80
 "Default behaviour seems rather counterintuintive to me
 set splitbelow " Vertical splits open to the right of the current file
 set splitright " Horizontal splits open below current file
@@ -83,6 +85,7 @@ nmap <leader>p :setlocal paste! paste?<cr>
 nnoremap <F1> :UndotreeToggle<CR>
 nnoremap <F2> :NERDTreeToggle<CR>
 nnoremap <F3> :TagbarToggle<CR>
+nnoremap <F4> :set invwrap wrap?<CR>
 " cycle through tabs
 nnoremap ,<Tab> :tabnext<CR>
 nnoremap ,<S-Tab> :tabprevious<CR>
