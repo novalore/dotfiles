@@ -29,7 +29,7 @@ UnBundle 'justinmk/vim-sneak'
 set clipboard=unnamedplus
 "Open NERDtree files in a new tab
 let g:NERDTreeMapOpenInTab='<ENTER>'
-"tpl files are usually full of html tags
+"Gemini tpl files are usually full of html tags
 autocmd BufRead,BufNewFile *.tpl set filetype=html
 "Wrap at 80 chars for Markdown, Text, Commits
 autocmd BufRead,BufNewFile *.md setlocal textwidth=80
@@ -75,6 +75,14 @@ function! s:template_keywords()
     normal! "_da<zz
   endif
 endfunction
+
+"Syntastic plugin
+let g:syntastic_enable_signs=1
+let g:syntastic_php_checkers=['php', 'phpcs']
+let g:syntastic_phpcs_conf='--standard=Zend --warning-severity=0'
+" Dont jump to the first error
+let g:syntastic_auto_jump=0 
+let g:syntastic_auto_loc_list=1
 "###########################
 "Custom aliases and mappings
 "###########################
@@ -86,6 +94,7 @@ nnoremap <F1> :UndotreeToggle<CR>
 nnoremap <F2> :NERDTreeToggle<CR>
 nnoremap <F3> :TagbarToggle<CR>
 nnoremap <F4> :set invwrap wrap?<CR>
+nnoremap <F5> :SyntasticCheck<CR>
 " cycle through tabs
 nnoremap ,<Tab> :tabnext<CR>
 nnoremap ,<S-Tab> :tabprevious<CR>
