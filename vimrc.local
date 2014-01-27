@@ -78,7 +78,7 @@ endfunction
 
 "Syntastic plugin
 let g:syntastic_enable_signs=1
-let g:syntastic_php_checkers=['php', 'phpcs']
+let g:syntastic_php_checkers=['php']
 let g:syntastic_phpcs_conf='--standard=Zend --warning-severity=0'
 " Dont jump to the first error
 let g:syntastic_auto_jump=0 
@@ -100,3 +100,8 @@ nnoremap ,<Tab> :tabnext<CR>
 nnoremap ,<S-Tab> :tabprevious<CR>
 "; and : live next to each other...
 nnoremap ; :
+
+"Change colorscheme if I'm in diff mode
+if &diff
+    colorscheme peaksea
+endif
