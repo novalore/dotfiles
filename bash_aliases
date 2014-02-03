@@ -8,6 +8,9 @@
     alias cd..='cd ..'
     alias ms='mysql -uroot -p'
     alias grep='grep --color'
+    alias syslog='journalctl'
+    alias wget='wget -c'
+    alias top='htop'
 
     #Sometimes I'm tired...
     alias eit='exit'
