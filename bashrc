@@ -49,6 +49,7 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+#Debian default - I'll set my prompt later
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
@@ -101,6 +102,7 @@ fi
 export EDITOR=vim
 export VISUAL=vim
 export PAGER=less
+
 # I love Debian style prompt, but sometimes pwd is too long...
 # https://www.debian-administration.org/articles/548
 function truncate_pwd
@@ -115,7 +117,7 @@ function truncate_pwd
    newPWD=$PWD
  fi
 
-  local pwdchars=16
+  local pwdchars=20
   if [ ${#newPWD} -gt $pwdchars ]
   then
     local pwdoffset=$(( ${#newPWD} - $pwdchars  ))
@@ -128,7 +130,9 @@ PROMPT_COMMAND=truncate_pwd
 # https://github.com/magicmonty/bash-git-prompt
 case "$TERM" in
     xterm*|rxvt*)
+        export GIT_PROMPT_LEADING_SPACE="0"
         export GIT_PROMPT_START="\[\033[1;30m\][\u@\h: \${newPWD}]\[\033[0m\]"
+        export GIT_PROMPT_END="$ "
         ;;
     *)
         ;;
