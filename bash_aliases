@@ -8,6 +8,13 @@
     alias cd..='cd ..'
     alias ms='mysql -uroot -p'
     alias grep='grep --color'
+    alias syslog='journalctl'
+    alias wget='wget -c'
+    alias top='htop'
+
+    #No more unreadable query results!
+    #https://coderwall.com/p/4gdrig
+    alias mysql='mysql --auto-vertical-output'
 
     #Sometimes I'm tired...
     alias eit='exit'
