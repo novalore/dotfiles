@@ -12,6 +12,10 @@
     alias wget='wget -c'
     alias top='htop'
 
+    #No more unreadable query results!
+    #https://coderwall.com/p/4gdrig
+    alias mysql='mysql --auto-vertical-output'
+
     #Sometimes I'm tired...
     alias eit='exit'
     alias eixt='exit'
