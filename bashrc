@@ -103,6 +103,14 @@ export EDITOR=vim
 export VISUAL=vim
 export PAGER=less
 
+#Squash git commits into one
+#https://coderwall.com/p/-p2gla
+function gsquash(){
+  git reset --soft HEAD~$1 && \
+  git commit --edit -m \
+  "$(git log --format=%B --reverse HEAD..HEAD@{1})"
+}
+
 # I love Debian style prompt, but sometimes pwd is too long...
 # https://www.debian-administration.org/articles/548
 function truncate_pwd
