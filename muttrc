@@ -45,6 +45,8 @@ macro index S \
  set smart_wrap
  set tilde
  unset markers
+# tolerate html use
+ auto_view text/html
 #
 # composing 
  set fcc_attach
