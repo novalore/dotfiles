@@ -1,4 +1,7 @@
 text/html;          links %s; nametemplate=%s.html
 text/html;          links -dump %s; nametemplate=%s.html; copiousoutput
-image/*;            /usr/bin/xdg-open %s
+image/*;            /usr/bin/xdg-open %s; test=test -n "$DISPLAY"
 application/*;      /usr/bin/xdg-open '%s'; test=test -n "$DISPLAY"
+video/*;            /usr/bin/xdg-open %s; test=test -n "$DISPLAY"
+audio/*;            /usr/bin/mpg321 '%s';
+text/*;             vim %s
