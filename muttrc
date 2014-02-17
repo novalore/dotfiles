@@ -3,26 +3,15 @@ set send_charset=utf-8
 #
 set mbox_type   = Maildir
 set sendmail    = /usr/bin/msmtp
-#
-set folder      = ~/Mail/Gmail
-set spoolfile   = "+INBOX"
-set mbox        = "+[Gmail]/Tutti i messaggi"
-set postponed   = "+[Gmail]/Bozze"
-unset record
-#
-mailboxes +INBOX
-#
-macro index D \
-    "<save-message>+[Gmail]/Cestino<enter>" \
-    "move to trash"
-#
-macro index S \
-    "<save-message>+[Gmail]/Spam<enter>" \
-    "mark as SPAM"
-#
-# main options
- set realname   = "Lorenzo Novaro"
- set from       = "novalore@gmail.com"
+# Multiple accounts in use
+set spoolfile = "+19/INBOX"
+
+source ~/.mutt/accounts/19
+
+folder-hook 19/*        source ~/.mutt/accounts/19
+folder-hook Gmail/*     source ~/.mutt/accounts/Gmail
+
+# Main options
  set mail_check = 0
  set envelope_from
 #
@@ -66,3 +55,10 @@ macro index S \
 #
 # Colorscheme
  source ~/.mutt/mutt-colors-solarized-dark-256.muttrc
+#
+#Key bindings
+bind index,pager <F2>   sidebar-next
+bind index,pager <F3>     sidebar-prev
+bind index,pager <space>    sidebar-open
+macro index B '<enter-command>toggle sidebar_visible<enter><refresh>'
+macro pager B '<enter-command>toggle sidebar_visible<enter><redraw-screen>'

@@ -31,7 +31,7 @@ sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 
 [Repository 19-Local]
 type = Maildir
-localfolders = ~/Mail/Work
+localfolders = ~/Mail/19
 
 [Repository 19-Remote]
 type = IMAP
