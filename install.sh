@@ -12,7 +12,7 @@ dir=~/dotfiles
 # old dotfiles backup directory
 olddir=~/dotfiles_old
 # list of files (even folders if needed) to symlink in homedir
-files="bashrc bash_aliases vimrc.local vimrc.before.local vimrc.bundles.local"
+files="bashrc bash_aliases vimrc.local vimrc.before.local vimrc.bundles.local offlineimaprc mutt muttrc"
 
 # Installation process:
 
