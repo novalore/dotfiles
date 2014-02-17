@@ -4,5 +4,7 @@ Bundle "gregsexton/MatchTag"
 Bundle "docunext/closetag.vim"
 Bundle "thinca/vim-template"
 Bundle "fishy/projtags-vim"
+"Mutt stuff...
+Bundle "chrisbra/CheckAttach"
 "Markdown magic! ...should try one day...
 "Bundle "suan/vim-instant-markdown"
