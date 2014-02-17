@@ -1,6 +1,6 @@
 [general]
 ui = ttyui
-accounts = Gmail
+accounts = Gmail, 19
 #Have a look at http://jaxartes.net/linux/mail.html 
 #and https://wiki.archlinux.org/index.php/OfflineIMAP
 pythonfile = ~/dotfiles/kwalletbinding.py
@@ -8,6 +8,10 @@ pythonfile = ~/dotfiles/kwalletbinding.py
 [Account Gmail]
 localrepository = Gmail-Local
 remoterepository = Gmail-Remote
+
+[Account 19]
+localrepository = 19-Local
+remoterepository = 19-Remote
 
 [Repository Gmail-Local]
 # Currently, offlineimap only supports Maildir and IMAP for local repositories.
@@ -24,3 +28,17 @@ realdelete = no
 maxconnections = 3
 ssl = yes
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Repository 19-Local]
+type = Maildir
+localfolders = ~/Mail/Work
+
+[Repository 19-Remote]
+type = IMAP
+remotehost = mail.diciannove.net
+remoteuser = faust@diciannove.net
+remotepasseval = kwallet_get('Python', '19@Passwords')
+ssl = yes
+cert_fingerprint = 636c907ae72a28a28ead8ce9e9ba12e085a7cfd7
+maxconnections = 3
+tls_trust_file = ~/.mutt/19.pem
