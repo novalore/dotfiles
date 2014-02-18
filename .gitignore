@@ -1,1 +1,2 @@
-mutt/accounts/*
+mutt/accounts/*.muttrc
+mutt/signatures/*

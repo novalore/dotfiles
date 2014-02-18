@@ -115,7 +115,7 @@ let g:syntastic_auto_loc_list=1
 
 "Mutt-related stuff
 autocmd FileType mail set spell
-
+"autocmd FileType mail nested NeoComplCacheLock
 "###########################
 "Custom aliases and mappings
 "###########################

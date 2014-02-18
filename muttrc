@@ -4,11 +4,10 @@ set send_charset=utf-8
 set mbox_type   = Maildir
 set sendmail    = /usr/bin/msmtp
 # Multiple accounts in use
-set spoolfile = "+19/INBOX"
-source ~/.mutt/accounts/19
+source ~/.mutt/accounts/19.muttrc
 
-folder-hook 19/*        source ~/.mutt/accounts/19
-folder-hook Gmail/*     source ~/.mutt/accounts/Gmail
+folder-hook 19/*        source ~/.mutt/accounts/19.muttrc
+folder-hook Gmail/*     source ~/.mutt/accounts/Gmail.muttrc
 
 # Main options
  set mail_check = 0
@@ -82,3 +81,6 @@ bind index,pager <F3>     sidebar-prev
 bind index,pager <space>    sidebar-open
 macro index B '<enter-command>toggle sidebar_visible<enter><refresh>'
 macro pager B '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
+#Switch between accounts
+macro index \e1 "<change-folder> =../19/INBOX<enter>"       "Jump to 19 (Inbox)"
+macro index \e2 "<change-folder> =../Gmail/INBOX<enter>"    "Jump to Gmail (Inbox)"
