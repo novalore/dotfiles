@@ -84,3 +84,9 @@ macro pager B '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
 #Switch between accounts
 macro index \e1 "<change-folder> =../19/INBOX<enter>"       "Jump to 19 (Inbox)"
 macro index \e2 "<change-folder> =../Gmail/INBOX<enter>"    "Jump to Gmail (Inbox)"
+macro index <F8> \
+          "<enter-command>unset wait_key<enter><shell-escape>/usr/bin/notmuch-mutt --prompt search<enter><change-folder-readonly>~/.cache/notmuch/mutt/results<enter>" \
+          "search mail (using notmuch)"
+macro index <F9> \
+          "<enter-command>unset wait_key<enter><pipe-message>/usr/bin/notmuch-mutt thread<enter><change-folder-readonly>~/.cache/notmuch/mutt/results<enter><enter-command>set wait_key<enter>" \
+          "search and reconstruct owning thread (using notmuch)"

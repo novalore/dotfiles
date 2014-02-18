@@ -11,6 +11,7 @@
     alias syslog='journalctl'
     alias wget='wget -c'
     alias top='htop'
+    alias m='mutt'
 
     #No more unreadable query results!
     #https://coderwall.com/p/4gdrig
