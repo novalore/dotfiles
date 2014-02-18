@@ -5,7 +5,6 @@ set mbox_type   = Maildir
 set sendmail    = /usr/bin/msmtp
 # Multiple accounts in use
 set spoolfile = "+19/INBOX"
-
 source ~/.mutt/accounts/19
 
 folder-hook 19/*        source ~/.mutt/accounts/19
@@ -55,6 +54,27 @@ folder-hook Gmail/*     source ~/.mutt/accounts/Gmail
 #
 # Colorscheme
  source ~/.mutt/mutt-colors-solarized-dark-256.muttrc
+#
+#Sidebar segfault prevention
+#It does not work well if its options are undefined
+set sidebar_visible = "no"
+set sidebar_width = 32
+#Unicode symbols are cool
+#set sidebar_delim = "|"
+#set sidebar_delim = "¦"
+#set sidebar_delim = "❄"
+#set sidebar_delim = "▤"
+#set sidebar_delim = "☣"
+#set sidebar_delim = "☢"
+#set sidebar_delim = "☯"
+#set sidebar_delim = "☸"
+#set sidebar_delim = "♻"
+#set sidebar_delim = "♽"
+#set sidebar_delim = "♼"
+#set sidebar_delim = "⚛"
+#set sidebar_delim = "⚠"
+#set sidebar_delim = "⚫"
+set sidebar_delim = "⚡"
 #
 #Key bindings
 bind index,pager <F2>   sidebar-next

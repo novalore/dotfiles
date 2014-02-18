@@ -17,7 +17,13 @@ remoterepository = 19-Remote
 # Currently, offlineimap only supports Maildir and IMAP for local repositories.
 type = Maildir
 localfolders = ~/Mail/Gmail
-
+nametrans = lambda folder: re.sub('Spam', '[Gmail].Spam',
+                           re.sub('Drafts', '[Gmail].Bozze',
+                           re.sub('Sent', '[Gmail].Posta inviata',
+                           re.sub('Special', '[Gmail].Speciali',
+                           re.sub('Trash', '[Gmail].Cestino',
+                           re.sub('Important', '[Gmail].Importanti',
+                           re.sub('Archive', '[Gmail].Tutti i messaggi', folder)))))))
 [Repository Gmail-Remote]
 type = Gmail
 remoteuser = novalore@gmail.com
@@ -28,7 +34,13 @@ realdelete = no
 maxconnections = 3
 ssl = yes
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
-
+nametrans = lambda folder: re.sub('.*Spam$', 'Spam', 
+                           re.sub('.*Bozze$', 'Drafts', 
+                           re.sub('.*Posta inviata$', 'Sent', 
+                           re.sub('.*Speciali$', 'Special', 
+                           re.sub('.*Cestino$', 'Trash', 
+                           re.sub('.*Importanti$', 'Important', 
+                           re.sub('.*Tutti i messaggi$', 'Archive', folder)))))))
 [Repository 19-Local]
 type = Maildir
 localfolders = ~/Mail/19
