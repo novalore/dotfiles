@@ -25,6 +25,7 @@ folder-hook Gmail/*     source ~/.mutt/accounts/Gmail.muttrc
  set sort_re
 #
 # look and feel
+ set index_format="%4C %Z %[%b %d %H:%M] %-22.22F (%4c) [%?Y?%-3.3y&---?] %s"
  set pager_index_lines = 8
  set pager_context     = 5
  set pager_stop
