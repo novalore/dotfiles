@@ -92,3 +92,4 @@ macro index <F8> \
 macro index <F9> \
           "<enter-command>unset wait_key<enter><pipe-message>/usr/bin/notmuch-mutt thread<enter><change-folder-readonly>~/.cache/notmuch/mutt/results<enter><enter-command>set wait_key<enter>" \
           "search and reconstruct owning thread (using notmuch)"
+macro index <tab> <next-unread><enter>
