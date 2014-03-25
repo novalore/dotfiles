@@ -1,5 +1,12 @@
 "First of all I want to be sure that syntax highlighting is on all the time...
 syntax enable
+"Autoindent with two spaces, always expand tabs
+set shiftwidth=2
+set expandtab
+set tabstop=2
+set softtabstop=2
+"Avoid delay after ESC
+set timeoutlen=0
 "Vars
 let g:author = "Lorenzo Novaro"
 let g:email  = "novalore@19.coop"

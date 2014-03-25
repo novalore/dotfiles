@@ -25,7 +25,7 @@ folder-hook Gmail/*     source ~/.mutt/accounts/Gmail.muttrc
  set sort_re
 #
 # look and feel
- set index_format="%4C %Z %[%b %d %H:%M] %-22.22F (%4c) [%?Y?%-3.3y&---?] %s"
+ set index_format="%4C ⚠%X %Z %[%D %H:%M] %-22.22F (%4c) [%?Y?%-3.3y&---?] %s"
  set pager_index_lines = 8
  set pager_context     = 5
  set pager_stop
@@ -33,6 +33,7 @@ folder-hook Gmail/*     source ~/.mutt/accounts/Gmail.muttrc
  set smart_wrap
  set tilde
  unset markers
+
 # tolerate html use
  auto_view text/html
  alternative_order text/plain text/enriched text/html
@@ -73,7 +74,6 @@ set sidebar_width = 32
 #set sidebar_delim = "♽"
 #set sidebar_delim = "♼"
 #set sidebar_delim = "⚛"
-#set sidebar_delim = "⚠"
 #set sidebar_delim = "⚫"
 set sidebar_delim = "⚡"
 #
