@@ -4,8 +4,6 @@ Bundle "gregsexton/MatchTag"
 Bundle "docunext/closetag.vim"
 Bundle "thinca/vim-template"
 Bundle "fishy/projtags-vim"
-"Mutt stuff...
-Bundle "chrisbra/CheckAttach"
 "Exec commands recursively in dirs
 Bundle "vim-scripts/DirDo.vim"
 "Xdebug support for php development

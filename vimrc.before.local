@@ -12,6 +12,7 @@ endif
 " Prevent automatic switch to open file directory
 let g:spf13_no_autochdir = 1
 
+let mapleader = ','
 " Disable views
 "   let g:spf13_no_views = 1
 

@@ -1,12 +1,12 @@
 "First of all I want to be sure that syntax highlighting is on all the time...
 syntax enable
+"Longer timeout for leader key (7 seconds)
+set timeoutlen=7000
 "Autoindent with two spaces, always expand tabs
 set shiftwidth=2
 set expandtab
 set tabstop=2
 set softtabstop=2
-"Avoid delay after ESC
-set timeoutlen=0
 "Vars
 let g:author = "Lorenzo Novaro"
 let g:email  = "novalore@19.coop"
@@ -14,9 +14,9 @@ let $DOTFILES = expand('~/dotfiles')
 "*********************
 "Colors
 "*********************
-""colorscheme vividchalk
+"colorscheme vividchalk
 "CursorLine doesn't want to be set, so I have to force it...
-""autocmd VimEnter * highlight CursorLine cterm=NONE  ctermfg=NONE ctermbg=232
+"autocmd VimEnter * highlight CursorLine cterm=NONE  ctermfg=NONE ctermbg=232
 colorscheme zenburn
 "I'll tell you when I want numbers!
 set nu!
@@ -32,10 +32,9 @@ set foldenable!
 let php_folding = 1
 "Writing comments in various languages confuses vim's spellchecker
 set nospell
-"indent-guides and pastel colorthemes are not friends :-/"
-UnBundle 'nathanaelkane/vim-indent-guides'
 "I want my S key back!
 UnBundle 'justinmk/vim-sneak'
+"Share clipboard with kde
 set clipboard=unnamedplus
 "Open NERDtree files in a new tab
 let g:NERDTreeMapOpenInTab='<ENTER>'
@@ -46,8 +45,8 @@ autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 autocmd BufRead,BufNewFile *.txt setlocal textwidth=80
 autocmd FileType gitcommit setlocal textwidth=80
 "Default behaviour seems rather counterintuintive to me
-set splitbelow " Vertical splits open to the right of the current file
-set splitright " Horizontal splits open below current file
+set splitright " Vertical splits open to the right of the current file
+set splitbelow " Horizontal splits open below current file
 "let g:ProjTags = [ "/var/www/besweb.dev" ]
 "**************************************
 " Vim-template plugin
@@ -114,7 +113,6 @@ function! CustomFoldText() "{{{1
 endfunction
 
 set foldtext=CustomFoldText()
-
 "Syntastic plugin
 let g:syntastic_enable_signs=1
 let g:syntastic_php_checkers=['php']
