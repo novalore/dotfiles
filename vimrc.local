@@ -18,6 +18,8 @@ let $DOTFILES = expand('~/dotfiles')
 "CursorLine doesn't want to be set, so I have to force it...
 "autocmd VimEnter * highlight CursorLine cterm=NONE  ctermfg=NONE ctermbg=232
 colorscheme zenburn
+"I don't like indentguides, but maybe one day I will...
+let g:indent_guides_enable_on_vim_startup = 0
 "I'll tell you when I want numbers!
 set nu!
 "Wrap long lines, but keep words whole
