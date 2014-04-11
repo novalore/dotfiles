@@ -1,7 +1,7 @@
 "First of all I want to be sure that syntax highlighting is on all the time...
 syntax enable
-"Longer timeout for leader key (7 seconds)
-set timeoutlen=7000
+"Longer timeout for leader key (5 seconds)
+set timeoutlen=5000
 "Autoindent with two spaces, always expand tabs
 set shiftwidth=2
 set expandtab
@@ -141,8 +141,6 @@ nnoremap <F5> :SyntasticCheck<CR>
 " cycle through tabs
 nnoremap ,<Tab> :tabnext<CR>
 nnoremap ,<S-Tab> :tabprevious<CR>
-"; and : live next to each other...
-nnoremap ; :
 "I'll never learn to move properly if arrows are available
 nnoremap <Left> :echoe "Use h to go left!"<CR>
 nnoremap <Right> :echoe "Use l to go right!"<CR>
