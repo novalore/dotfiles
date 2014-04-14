@@ -146,6 +146,10 @@ nnoremap <Left> :echoe "Use h to go left!"<CR>
 nnoremap <Right> :echoe "Use l to go right!"<CR>
 nnoremap <Up> :echoe "Use k to go up!"<CR>
 nnoremap <Down> :echoe "Use j to go down!"<CR>
+vnoremap <Left> :echoe "Use h to go left!"<CR>
+vnoremap <Right> :echoe "Use l to go right!"<CR>
+vnoremap <Up> :echoe "Use k to go up!"<CR>
+vnoremap <Down> :echoe "Use j to go down!"<CR>
 "Change colorscheme if I'm in diff mode
 if &diff
     colorscheme peaksea
