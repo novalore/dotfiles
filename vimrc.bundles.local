@@ -8,5 +8,7 @@ Bundle "fishy/projtags-vim"
 Bundle "vim-scripts/DirDo.vim"
 "Xdebug support for php development
 Bundle "joonty/vdebug"
+"I finally understood why Numbers.vim is awesome
+Bundle "myusuf3/numbers.vim"
 "Markdown magic! ...should try one day...
 "Bundle "suan/vim-instant-markdown"
