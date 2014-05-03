@@ -1,4 +1,4 @@
-"First of all I want to be sure that syntax highlighting is on all the time...
+"Syntax highlighting must be ON all the time...
 syntax enable
 "Longer timeout for leader key (5 seconds)
 set timeoutlen=5000
@@ -7,16 +7,8 @@ set shiftwidth=2
 set expandtab
 set tabstop=2
 set softtabstop=2
-"Vars
-let g:author = "Lorenzo Novaro"
-let g:email  = "novalore@19.coop"
-let $DOTFILES = expand('~/dotfiles')
-"*********************
-"Colors
-"*********************
-"colorscheme vividchalk
-"CursorLine doesn't want to be set, so I have to force it...
-"autocmd VimEnter * highlight CursorLine cterm=NONE  ctermfg=NONE ctermbg=232
+"I also like vividchalk, but zenburn feels better
+"http://slinky.imukuppi.org/zenburn/
 colorscheme zenburn
 "I don't like indentguides, but maybe one day I will...
 let g:indent_guides_enable_on_vim_startup = 0
@@ -47,11 +39,17 @@ autocmd FileType gitcommit setlocal textwidth=80
 "Default behaviour seems rather counterintuintive to me
 set splitright " Vertical splits open to the right of the current file
 set splitbelow " Horizontal splits open below current file
+"Project-specific tags
 "let g:ProjTags = [ "/var/www/besweb.dev" ]
 "**************************************
 " Vim-template plugin
 " https://github.com/naoina/dot-files/
 "**************************************
+"Vars
+let g:author = "Lorenzo Novaro"
+let g:email  = "novalore@19.coop"
+let $DOTFILES = expand('~/dotfiles')
+"Function
 let g:template_basedir = $DOTFILES . '/templates'
 let g:template_files = '**'
 let g:template_free_pattern = 'skel-\?'
@@ -84,6 +82,7 @@ function! s:template_keywords()
     normal! "_da<zz
   endif
 endfunction
+
 "********************************************
 " Improving the text displayed in a Vim fold
 " http://s.coop/1u541
@@ -120,13 +119,14 @@ let g:syntastic_php_checkers=['php']
 " Dont jump to the first error
 let g:syntastic_auto_jump=0 
 let g:syntastic_auto_loc_list=1
-
+"*******************
 "Mutt-related stuff
+"*******************
 autocmd FileType mail set spell
 "autocmd FileType mail nested NeoComplCacheLock
-"###########################
+"***************************
 "Custom aliases and mappings
-"###########################
+"***************************
 "pastetoggle is on <F12> in spf13, but I use yakuake
 "this mapping works as expected (and echoes current state as a bonus!)
 nmap <leader>p :setlocal paste! paste?<cr>
@@ -152,9 +152,8 @@ vnoremap <Down> :echoe "Use j to go down!"<CR>
 if &diff
     colorscheme peaksea
 endif
-
-"##############
+"**************
 "Sysadmin stuff
-"#############
+"**************
 autocmd BufRead,BufNewFile /etc/nginx/* setfiletype conf
 autocmd BufNewFile,BufRead /*apache* setfiletype apache
