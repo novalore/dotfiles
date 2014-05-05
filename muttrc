@@ -1,14 +1,14 @@
 set charset=utf-8
 set send_charset=utf-8
-#
 set mbox_type   = Maildir
 set sendmail    = /usr/bin/msmtp
+#
 # Multiple accounts in use
 source ~/.mutt/accounts/19.muttrc
-
+#
 folder-hook 19/*        source ~/.mutt/accounts/19.muttrc
 folder-hook Gmail/*     source ~/.mutt/accounts/Gmail.muttrc
-
+#
 # Main options
  set mail_check = 0
  set envelope_from
@@ -33,7 +33,7 @@ folder-hook Gmail/*     source ~/.mutt/accounts/Gmail.muttrc
  set smart_wrap
  set tilde
  unset markers
-
+#
 # tolerate html use
  auto_view text/html
  alternative_order text/plain text/enriched text/html
@@ -83,9 +83,12 @@ bind index,pager <F3>     sidebar-prev
 bind index,pager <space>    sidebar-open
 macro index B '<enter-command>toggle sidebar_visible<enter><refresh>'
 macro pager B '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
+#
 #Switch between accounts
 macro index \e1 "<change-folder> =../19/INBOX<enter>"       "Jump to 19 (Inbox)"
 macro index \e2 "<change-folder> =../Gmail/INBOX<enter>"    "Jump to Gmail (Inbox)"
+#
+#Notmuch-mail search
 macro index <F8> \
           "<enter-command>unset wait_key<enter><shell-escape>/usr/bin/notmuch-mutt --prompt search<enter><change-folder-readonly>~/.cache/notmuch/mutt/results<enter>" \
           "search mail (using notmuch)"
