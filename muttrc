@@ -46,8 +46,8 @@ folder-hook Gmail/*     source ~/.mutt/accounts/Gmail.muttrc
  set forward_quote
 #
  ignore *                               # first, ignore all headers
- unignore from: to: cc: bcc: date: subject:  # then, show only these
- hdr_order from: to: cc: bcc: date: subject: # and in this order
+ unignore from: to: cc: bcc: X-Mailer: User-Agent: X-User-Agent: List-Id: date: subject:  # then, show only these
+ hdr_order from: to: cc: bcc: X-Mailer: User-Agent: X-User-Agent: List-Id: date: subject: # and try to display them in this order
 #
 # Vim
  set edit_headers
