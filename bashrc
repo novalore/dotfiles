@@ -115,14 +115,14 @@ function gsquash(){
 # https://www.debian-administration.org/articles/548
 function truncate_pwd
 {
- if [ $HOME == $PWD ]
+ if [ "$HOME" = "$PWD" ]
  then
    newPWD="~"
- elif [ $HOME ==  ${PWD:0:${#HOME}} ]
+ elif [ "$HOME" ==  ${PWD:0:${#HOME}} ]
  then
    newPWD="~${PWD:${#HOME}}"
  else
-   newPWD=$PWD
+   newPWD="$PWD"
  fi
 
   local pwdchars=20
