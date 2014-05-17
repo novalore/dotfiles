@@ -114,8 +114,11 @@ endfunction
 set foldtext=CustomFoldText()
 "Syntastic plugin
 let g:syntastic_enable_signs=1
+"PHP
 let g:syntastic_php_checkers=['php']
 "let g:syntastic_phpcs_conf='--standard=Zend --warning-severity=0'
+"Puppet
+let g:syntastic_puppet_checkers=['puppet']
 " Dont jump to the first error
 let g:syntastic_auto_jump=0 
 let g:syntastic_auto_loc_list=1
@@ -135,7 +138,7 @@ nnoremap <F1> :UndotreeToggle<CR>
 nnoremap <F2> :NERDTreeToggle<CR>
 nnoremap <F3> :TagbarToggle<CR>
 nnoremap <F4> :set invwrap wrap?<CR>
-nnoremap <F5> :SyntasticCheck<CR>
+"nnoremap <F5> :SyntasticCheck<CR>
 " cycle through tabs
 nnoremap ,<Tab> :tabnext<CR>
 nnoremap ,<S-Tab> :tabprevious<CR>
