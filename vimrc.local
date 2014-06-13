@@ -1,3 +1,4 @@
+set shell=/bin/bash
 "Syntax highlighting must be ON all the time...
 syntax enable
 "Longer timeout for leader key (5 seconds)
