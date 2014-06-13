@@ -13,8 +13,9 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1500
-HISTFILESIZE=2500
+HISTSIZE=10000
+HISTFILESIZE=3000
+HISTCONTROL=erasedups
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -76,6 +77,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
+    alias tree='tree -C'
+    alias trls='tree -C | less -R'	# -C outputs colour, -R makes less understand color
 fi
 
 # some more ls aliases
