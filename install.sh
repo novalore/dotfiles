@@ -12,7 +12,7 @@ dir=~/dotfiles
 # old dotfiles backup directory
 olddir=~/dotfiles_old
 # list of files (even folders if needed) to symlink in homedir
-files="bashrc bash_aliases vimrc.local vimrc.before.local vimrc.bundles.local offlineimaprc msmtprc mutt muttrc mailcap puppet-lint.rc"
+files="bashrc bash_aliases bash_profile vimrc.local vimrc.before.local vimrc.bundles.local offlineimaprc msmtprc mutt muttrc mailcap puppet-lint.rc"
 
 # Installation process:
 
