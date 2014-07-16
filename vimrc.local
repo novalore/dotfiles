@@ -1,3 +1,11 @@
+"
+"**************************************************
+" .vimrc.local file of Lorenzo Novaro.
+"
+" Present conf relies on Steve Francia's spf13-vim.
+" https://github.com/spf13/spf13-vim
+"**************************************************
+"
 set shell=/bin/bash
 "Syntax highlighting must be ON all the time...
 syntax enable
@@ -143,15 +151,6 @@ nnoremap <F4> :set invwrap wrap?<CR>
 " cycle through tabs
 nnoremap ,<Tab> :tabnext<CR>
 nnoremap ,<S-Tab> :tabprevious<CR>
-"I'll never learn to move properly if arrows are available
-nnoremap <Left> :echoe "Use h to go left!"<CR>
-nnoremap <Right> :echoe "Use l to go right!"<CR>
-nnoremap <Up> :echoe "Use k to go up!"<CR>
-nnoremap <Down> :echoe "Use j to go down!"<CR>
-vnoremap <Left> :echoe "Use h to go left!"<CR>
-vnoremap <Right> :echoe "Use l to go right!"<CR>
-vnoremap <Up> :echoe "Use k to go up!"<CR>
-vnoremap <Down> :echoe "Use j to go down!"<CR>
 "Change colorscheme if I'm in diff mode
 if &diff
     colorscheme peaksea
