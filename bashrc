@@ -153,5 +153,5 @@ if [ -f ~/.bash-git-prompt/gitprompt.sh ]; then
     . ~/.bash-git-prompt/gitprompt.sh
 fi
 
-PERL_MB_OPT="--install_base \"/home/faust/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/faust/perl5"; export PERL_MM_OPT;
+PERL_MB_OPT="--install_base \"~/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=~/perl5"; export PERL_MM_OPT;
