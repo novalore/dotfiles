@@ -16,9 +16,14 @@ set shiftwidth=2
 set expandtab
 set tabstop=2
 set softtabstop=2
-"I also like vividchalk, but zenburn feels better
+"Zenburn-esque darkmate
+colorscheme darkmate
+hi Normal         guifg=#dcdccc guibg=#3f3f3f ctermfg=188 ctermbg=237
+hi ColorColumn    guibg=#484848 ctermbg=238
+hi CursorLine     guibg=#434443 ctermbg=238 cterm=none
+hi CursorLineNr   guifg=#d2d39b guibg=#262626 ctermfg=230 ctermbg=235
 "http://slinky.imukuppi.org/zenburn/
-colorscheme zenburn
+"colorscheme zenburn
 "I don't like indentguides, but maybe one day I will...
 let g:indent_guides_enable_on_vim_startup = 0
 "Wrap long lines, but keep words whole

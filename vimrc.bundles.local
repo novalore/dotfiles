@@ -1,9 +1,10 @@
+Bundle "yearofmoo/Vim-Darkmate"
+Bundle "thinca/vim-template"
+Bundle "fishy/projtags-vim"
 "I edit HTML sometimes ;-)
 Bundle "othree/html5-syntax.vim"
 Bundle "gregsexton/MatchTag"
 Bundle "docunext/closetag.vim"
-Bundle "thinca/vim-template"
-Bundle "fishy/projtags-vim"
 "Exec commands recursively in dirs
 Bundle "vim-scripts/DirDo.vim"
 "Xdebug support for php development
