@@ -9,6 +9,8 @@
 set shell=/bin/bash
 "Syntax highlighting must be ON all the time...
 syntax enable
+"Rather than highlighting from file start, sync only my surroundings (faster)
+syntax sync minlines=256
 "Longer timeout for leader key (5 seconds)
 set timeoutlen=5000
 "Autoindent with two spaces, always expand tabs
@@ -16,12 +18,8 @@ set shiftwidth=2
 set expandtab
 set tabstop=2
 set softtabstop=2
-"Zenburn-esque darkmate
+"My personal Zenburn-esque darkmate
 colorscheme darkmate
-hi Normal         guifg=#dcdccc guibg=#3f3f3f ctermfg=188 ctermbg=237
-hi ColorColumn    guibg=#484848 ctermbg=238
-hi CursorLine     guibg=#434443 ctermbg=238 cterm=none
-hi CursorLineNr   guifg=#d2d39b guibg=#262626 ctermfg=230 ctermbg=235
 "http://slinky.imukuppi.org/zenburn/
 "colorscheme zenburn
 "I don't like indentguides, but maybe one day I will...
@@ -40,6 +38,7 @@ let php_folding = 1
 set nospell
 "I want my S key back!
 UnBundle 'justinmk/vim-sneak'
+UnBundle "yearofmoo/Vim-Darkmate"
 "Share clipboard with kde
 set clipboard=unnamedplus
 "Open NERDtree files in a new tab
