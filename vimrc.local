@@ -20,6 +20,8 @@ set tabstop=2
 set softtabstop=2
 "My personal Zenburn-esque darkmate
 colorscheme darkmate
+"Don't forget to italicize comments
+highlight Comment cterm=italic
 "http://slinky.imukuppi.org/zenburn/
 "colorscheme zenburn
 "I don't like indentguides, but maybe one day I will...
