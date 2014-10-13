@@ -4,9 +4,9 @@
 "I don't need all plugins in spf-13
 if !exists('g:spf13_bundle_groups')
     " Full bundle groups list
-    "let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'php', 'ruby', 'python', 'go', 'twig', 'javascript', 'haskell', 'html', 'misc', 'scala']
+    "let g:spf13_bundle_groups=['general', 'writing', 'snipmate' , 'neocomplcache', 'programming', 'php', 'ruby', 'python', 'go', 'twig', 'javascript', 'haskell', 'html', 'misc', 'scala']
     " My list:
-    let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'youcompleteme', 'misc']
+    let g:spf13_bundle_groups=['general', 'writing', 'neocomplcache', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'youcompleteme', 'misc']
 endif
 
 " Prevent automatic switch to open file directory

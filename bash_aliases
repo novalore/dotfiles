@@ -12,6 +12,7 @@
     alias wget='wget -c'
     alias top='htop'
     alias m='mutt'
+    alias ssh='TERM=xterm-256color ssh'
 
     #No more unreadable query results!
     #https://coderwall.com/p/4gdrig

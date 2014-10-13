@@ -10,7 +10,7 @@ set shell=/bin/bash
 "Syntax highlighting must be ON all the time...
 syntax enable
 "Rather than highlighting from file start, sync only my surroundings (faster)
-syntax sync minlines=256
+syntax sync minlines=384
 "Longer timeout for leader key (5 seconds)
 set timeoutlen=5000
 "Autoindent with two spaces, always expand tabs
@@ -20,8 +20,6 @@ set tabstop=2
 set softtabstop=2
 "My personal Zenburn-esque darkmate
 colorscheme darkmate
-"Don't forget to italicize comments
-highlight Comment cterm=italic
 "http://slinky.imukuppi.org/zenburn/
 "colorscheme zenburn
 "I don't like indentguides, but maybe one day I will...
