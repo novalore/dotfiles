@@ -18,3 +18,5 @@ Bundle "rodjek/vim-puppet"
 Bundle 'tpope/vim-speeddating'
 "My own colorscheme (work in progress)
 Bundle "novalore/Vim-Darkmate"
+"Autocomplete is great!
+Bundle "Shougo/neocomplete"
