@@ -1,2 +1,3 @@
 mutt/accounts/*.muttrc
 mutt/signatures/*
+.directory
